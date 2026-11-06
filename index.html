@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JuanPablo</title>
+            <style>
+ * {
+    box-sizing: border-box;
+}
+/* Colores--> */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(112, 35, 35);
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.titulo {
+    background:linear-gradient(50deg, #0A0A0A, #f63650);
+    padding: 20px;
+    max-width: 2900px;
+    text-align: center;
+}
+
+.titulo h1 {
+    margin: 0;
+}
+.a{
+    background-color: rgb(80, 23, 108);
+    padding: 30px;
+    text-align:left ;
+    max-width: 2000px;
+    object-fit: cover;
+  
+}
+
+.b {
+    background-color: rgb(76, 46, 79);
+    padding: 30px;
+    text-align: left;
+    max-width: 4000px;
+    object-fit: cover;
+
+}
+
+.bb{
+    background:linear-gradient(60deg, rgb(77, 30, 58), #2a557d);
+    padding: 30px;
+    text-align: left;
+    max-width: 4000px;
+    object-fit: cover;
+}
+
+.c {
+    background:linear-gradient(60deg, rgb(77, 30, 58), #2a557d);
+    padding: 30px;
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 1900px;
+}
+.d {
+    background:linear-gradient(60deg, rgb(77, 30, 58), #2a557d);
+    padding: 30px;
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 1900px;
+}
+.e {
+    background-color: rgb(61, 98, 230);
+    padding: 30px;
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 100%;
+    max-width: 1900px;
+    max-height: 90px;
+}
+.f {
+   background:linear-gradient(60deg, rgb(77, 30, 58), #2a557d);
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 100%;
+    max-width: 1900px;
+    
+}
+
+li {
+    color: rgb(6, 1, 41);
+    margin: 8px 0;
+}
+
+h2 {
+    color: rgb(222, 26, 26);
+}
+/* acomodo */
+
+.centrado {
+    
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgb(43, 3, 85);
+
+}
+.isquierda {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border: 4px solid rgba(167, 64, 36, 0.951);
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* condicionales--> */
+
+.galeria img {
+    width: 220px;
+    height: 190px;
+    object-fit: cover;
+}
+.galeria iframe {
+    width: 220px;
+    height: 190px;
+    object-fit: cover;
+}
+/* calificanos */
+        .g{
+            background:linear-gradient(60deg, rgb(77, 30, 58), #2a557d);
+            width: 600px;
+            height: 600px;
+            border: 4px solid rgba(167, 64, 36, 0.951);
+        }
+
+        h3{
+            text-align: center;
+        }
+        .h4{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border-radius: 20px;
+        }
+/* tabla */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}        
+th, td{
+    border: 1px solid #c42222;
+    padding: 10px;
+    text-align: center;
+}
+.celda-blanca{
+    background-color: aliceblue;
+    height: 56px;
+}
+.celda-gris{
+    background-color: gray;
+    height: 56px;
+}
+.titulot{
+    background-color: chartreuse;
+}
+        /* Ocultamos ambas secciones por defecto */
+        .seccion {
+            display: none;
+            padding: 20px;
+        }
+
+        .seccion:target {
+            display: block;
+        }
+
+        #inicio {
+            display: block;
+        }
+        body:has(:target) #inicio:not(:target) {
+            display: none;
+        }
+
+
+/* Ajustes para que la página se adapte a distintos tamaños de pantalla */
+img, iframe, input, textarea, button {
+    max-width: 100%;
+}
+
+p, li, h1, h2, h3, label {
+    overflow-wrap: anywhere;
+}
+
+.centrado, .isquierda {
+    width: 100%;
+}
+
+.b, .c, .d, .e, .f, .a, .bb {
+    min-width: 0;
+    width: 100%;
+}
+
+.b {
+    max-width: 300px;
+}
+
+.g {
+    width: 100%;
+    max-width: 600px;
+    min-height: 0;
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.g form input[type="text"],
+.g form input[type="email"] {
+    width: 100%;
+    max-width: 320px;
+}
+
+.g form label {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.g form .h {
+    margin: 12px 0;
+}
+
+.g form button {
+    margin-top: 16px;
+    padding: 10px 16px;
+}
+
+.galeria img,
+.galeria iframe {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 22 / 19;
+    object-fit: cover;
+}
+nav {
+            background-color: #1a1a1a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover { color: #E10600; }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .titulo {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+    }
+
+    .titulo h1 {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+    }
+
+    .b, .c, .d, .e, .f, .a, .bb {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .galeria {
+        gap: 12px;
+    }
+
+    .galeria img,
+    .galeria iframe {
+        max-width: 100%;
+        flex: 1 1 140px;
+    }
+
+    .g {
+        padding: 14px;
+    }
+
+    .f h2 {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+    </head>
+    <body>
+    <div class="centrado">
+        <div class="titulo">
+            <h1>Juan Pablo Ramos Arenas </h1>
+        </div>
+    </div>
+    <div class="centrado">
+            <nav>
+        <a href="#inicio">Quien soy</a>
+        <a href="#nosotros">Biografia</a>
+        <a href="#paquetes">Pasatiempos</a>
+        <a href="#buzon">Contactame</a>
+    </nav>
+    </div>
+<div id="inicio" class="seccion"   >
+    <div class="isquierda">
+        <div class="b">
+
+        </div>
+        <div class="a">
+
+        </div>
+    </div>
+        <div class="isquierda">
+        <div class="d">
+            <h1>Quien soy?</h1>
+            <p>Mi nombre es Juan Pablo Ramos Arenas, Nasi el 9 de febrero del 2009 en león Guanajuato, soy estudiante de la preparatoria CETAC 10 en Sanjose del Potrero.</p>
+            <div class="galeria">
+                <img src="imagenes\OIP (2).jpg">
+                <p>Actual mente estudio la carrera de programación y me falta un año para terminar mis estudios en la preparatoria, también tengo un trabajo de medio tiempo con mi abuelo criando borregos de engorda.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <section id="1">  
+</div> 
+<div id="nosotros" class="seccion">
+    <div class="isquierda">
+         <div class="c">
+             <h1>Biografia</h1>
+            <p>¡Hola!, Mi nombre es Juan Pablo Ramos Arenas, nací el 9 de febrero del 2009 en León Guanajuato México, Cuando tenia un par de meses de nacido mi abuelo me llevaba de paseo por todas partes lo cual se me pego y en la actualidad me sigue guastando mucho lo que son los viajes, a los 4 años me enyese un brazo lo cual provoca mucha comezón y no pude usar mi brazo por 2 meses (No lo recomiendo), entre los 5 y los 8 años tenia una vida relativa mente sencilla (Estudiar, comer, tareas, deberes y montarle a una vaca de 350kg) lo típico de cada vida, devuelta a los 9 años me volví a enyesar el brazo (Y de vuelta volvió la comezón y el no poder usar el brazo), para mis 10 años y los próximos 4 años serian tiempos de pandemia con salidas ocasionales a jugar, pero durante la mayor parte de ese tiempo lo utilizaría para trabajar con mi abuelo en la ganadería (aunque terminara aplastado entre dos vacas), de los 14 años en delante no e dejado de estudiar y trabajar (Profe deje menos trabajo) pero por fin voy a terminar mi prepa y solo quedara acabar la universidad (¡AAAaaaaaa!), Bueno y aquí acaba mi auto biografía.</p>
+            <div class="galeria">
+                <img src="imagenes\WhatsApp Image 2026-11-05 at 7.50.58 PM.jpeg">
+                <img src="imagenes\WhatsApp Image 2026-11-05 at 7.51.02 PM.jpeg">
+            </div>
+         </div>
+     </div>
+    </div>    
+</div>
+<div id="paquetes" class="seccion">
+    <div class="isquierda">
+         <div class="c">
+             <h1>Pasatiempos</h1>
+            <p>La verdad mas que pasatiempos son mas obligaciones como los estudios y el trabajo, aunque tengo un par de gustos por las películas y los video juegos como es el Minecraft y el war thunder juegos que la verdad no son la gran cosa pero sirven para bajar el estrés cuando el profe deja demasiada tarea.</p>
+            <div class="galeria">
+                <img src="imagenes\Steve-Minecraft-Wallpapers-HD-Wallpaper.jpg">
+                <img src="imagenes\OIP11.jpg">
+                <img src="imagenes\R.jpg">
+                <img src="imagenes\OIP.jpg">
+            </div>
+         </div>
+     </div>
+</div>
+<div id="buzon" class="seccion">  
+            <div class="centra">
+        <section class="g">
+         <h3>Contactame</h3>
+         <form action="mailto:juanpabloramosarenas38@gmail.com" method="post" enctype="text/plain">
+            <div class="h">
+         <label>
+            Nombre de usuario:
+            <input type="text" name="Nombre">
+         </label>
+         </div>
+         <div class="h">
+         <label>
+            Correo elctronico:
+            <input type="email" name="Correo">
+         </label>
+         </div>     
+         <label>   
+            <button type="submit">Enviar Respuesta</button>
+         </form>
+        </section>
+        </div>
+</div>          
+    <div style="border: 4px solid rgb(43, 3, 85) ;" class="isquierda">
+        <div class="f">
+            <h2>&copy; Pagina creada por Juan Pablo Ramos Arenas </h2>
+        </div>
+    </div>      
+    </body>
+</html>
